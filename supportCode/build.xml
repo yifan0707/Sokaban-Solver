@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project basedir="." default="jars" name="Main">
+    <target name="compile" depends="clean">
+        <mkdir dir="bin"/>
+        <javac destdir="bin" srcdir="src" includeantruntime="false"/>
+    </target>
+
+    <target name="jars" depends="compile" description="Main.jar">
+        <jar basedir="bin"  jarfile="Main.jar">
+            <manifest>
+                <attribute name="Main-Class" value="solution.Main"/>
+            </manifest>
+
+        </jar>
+    </target>
+
+    <target name="clean" description="Remove all binaries">
+        <delete dir="bin"/>
+        <delete file="Main.jar"/>
+    </target>
+</project>
