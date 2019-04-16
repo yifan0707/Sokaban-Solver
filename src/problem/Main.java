@@ -8,8 +8,8 @@ public class Main {
 
         ProblemSpec ps = new ProblemSpec();
         try {
-            ps.loadProblem("input2.txt");
-            ps.loadSolution("output2.txt");
+            ps.loadProblem("./src/examples/input2.txt");
+            ps.loadSolution("./src/examples/output2.txt");
         } catch (IOException e) {
             System.out.println("IO Exception occured");
         }

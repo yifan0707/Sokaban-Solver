@@ -11,7 +11,7 @@ public class Main {
     public static void main(String args[]) throws IOException{
         ProblemSpec ps = new ProblemSpec();
         try {
-            ps.loadProblem("src/examples/input3.txt");
+            ps.loadProblem("./examples/2_rows_no_boxes.txt");
         } catch (IOException e1) {
             System.out.println("FAILED: Invalid problem file");
             System.out.println(e1.getMessage());
@@ -38,7 +38,7 @@ public class Main {
 
     private static void initOutputFile(List<State> states) {
         try {
-            PrintWriter writer = new PrintWriter("output3.txt", "UTF-8");
+            PrintWriter writer = new PrintWriter("./examples/2_rows_no_boxes_solution.txt", "UTF-8");
             writer.println(states.size());
             for(State state : states) {
                 writer.println(state.toString());

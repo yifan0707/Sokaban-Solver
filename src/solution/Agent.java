@@ -114,7 +114,6 @@ public class Agent {
         return result;
     }
 
-
     private RobotState initRobotState(BoxesNode node) {
         double xNew, yNew, angle;
         Direction dir = node.getLastDir();
@@ -166,26 +165,6 @@ public class Agent {
         return new State(tempRobot, node.getBoxesState().getMovableBoxes(), node.getBoxesState().getMovableObstacles());
     }
 
-    /*
-    private List<State> rotateRobotAroundBox(RobotConfig curRobot, BoxesNode curNode, BoxesNode nextNode) {
-        Box target = nextNode.getTarget();
-        Direction curDir = curNode.getLastDir();
-        Direction nextDir = nextNode.getLastDir();
-        RobotAgent agent = new RobotAgent(new State(curRobot, nextNode.getBoxesState().getMovableBoxes(),
-                nextNode.getBoxesState().getMovableObstacles()), staticObstacles);
-
-        List<RobotState> robotStates = agent.rotateRobotCertainDir(target, curDir, nextDir);
-
-
-        List<State> result = new ArrayList<>();
-        for(int i = 0; i < robotStates.size(); i++) {
-            result.add(new State(robotStates.get(i).getRobot(), nextNode.getBoxesState().getMovableBoxes(),
-                    nextNode.getBoxesState().getMovableObstacles()));
-        }
-        return result;
-    }
-
-*/
     /**
      *
      * @param curNode
